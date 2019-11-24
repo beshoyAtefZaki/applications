@@ -6,14 +6,32 @@ import frappe
 def get_data():
 	return  [
 		{
-    "label": _("Receivable"),
+    "label": _("Applications"),
     "items": [
       {
         "type": "doctype",
         "name": "Employee applications",
         "description": _("Employee applications."),
 		"onboard": 1,
-      }
+      },
+	   {
+         "type": "doctype",
+         "name": "Manager applications",
+         "description": _("Employee applications."),
+ 		"onboard": 1,
+       },
+	    {
+          "type": "doctype",
+          "name": "Financial manager",
+          "description": _("Employee applications."),
+  		"onboard": 1,
+        },
+		 {
+           "type": "doctype",
+           "name": "Executive manager",
+           "description": _("Employee applications."),
+   		"onboard": 1,
+         }
       ]
 
     	}]

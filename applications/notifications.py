@@ -3,7 +3,7 @@ import frappe
 
 def get_notification_config():
     notifications =  { "for_doctype":
-        {"Employee applications": {"docstatus": 0},}
+        {"Employee applications": {'status':'Waiting'}}
 
 
 
@@ -15,7 +15,3 @@ def get_notification_config():
     #
     #
     return notifications
-
-
-
-    
