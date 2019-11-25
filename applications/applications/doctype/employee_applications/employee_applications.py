@@ -6,9 +6,11 @@ from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
 from applications.utilites import create_manager_app
+
+
 class Employeeapplications(Document):
 		def on_submit(self):
-			create_manager_app("Manager applications" ,self.employee , self.employee_name , self.status ,
+			create_manager_app("Manager applications", self.name , self.employee , self.employee_name , self.status ,
 								self.applications , self.attachment)
 
 

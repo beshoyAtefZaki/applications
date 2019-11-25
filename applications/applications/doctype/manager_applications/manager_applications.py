@@ -10,5 +10,5 @@ from applications.utilites import create_manager_app
 class Managerapplications(Document):
 
 	def on_submit(self):
-		create_manager_app("Financial manager",self.employee , self.employee_name , self.status ,
+		create_manager_app("Financial manager",self.name,self.employee , self.employee_name , self.status ,
 							self.applications , self.attachment)
