@@ -1,12 +1,13 @@
 {
  "autoname": "naming_series:",
- "creation": "2019-11-24 13:33:53.944608",
+ "creation": "2019-11-25 09:38:16.986784",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "employee",
   "naming_series",
+  "employee",
+  "employee_name",
   "status",
   "applications",
   "attachment",
@@ -19,7 +20,14 @@
    "in_list_view": 1,
    "label": "Employee",
    "options": "Employee",
+   "read_only": 1,
    "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
   },
   {
    "default": "Waiting",
@@ -44,25 +52,27 @@
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
-   "options": "Financial manager"
+   "no_copy": 1,
+   "options": "Executive manager",
+   "print_hide": 1,
+   "read_only": 1
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Series",
    "no_copy": 1,
-   "options": "EXM-APP-.YYYY.-",
+   "options": "GM-APP-.YYYY.-",
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2019-11-25 10:48:16.957192",
+ "modified": "2019-11-25 10:52:03.381735",
  "modified_by": "Administrator",
  "module": "Applications",
- "name": "Executive manager",
+ "name": "G M Applications",
  "owner": "Administrator",
  "permissions": [
   {
@@ -89,7 +99,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Executive manager",
+   "role": "HR Manager",
    "share": 1,
    "submit": 1,
    "write": 1

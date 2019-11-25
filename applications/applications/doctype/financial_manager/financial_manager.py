@@ -3,8 +3,12 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-# import frappe
+import frappe
 from frappe.model.document import Document
+from applications.utilites import create_manager_app
+
 
 class Financialmanager(Document):
-	pass
+	def on_submit(self):
+		create_manager_app("Executive manager" ,self.employee , self.employee_name , self.status ,
+							self.applications , self.attachment)

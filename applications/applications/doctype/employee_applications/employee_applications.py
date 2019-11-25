@@ -5,7 +5,7 @@
 from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
-
+from applications.utilites import create_manager_app
 class Employeeapplications(Document):
 		def on_submit(self):
 			create_manager_app("Manager applications" ,self.employee , self.employee_name , self.status ,
@@ -13,16 +13,7 @@ class Employeeapplications(Document):
 
 
 
-def create_manager_app(docname, employee , em_name , status , applications,attachment):
-	doc               = frappe.new_doc(docname)
-	doc.employee      = employee
-	doc.employee_name = em_name
-	doc.status        = status
-	doc.applications = applications
-	doc.attachment    = attachment
-	doc.insert(ignore_permissions=True)
-	doc.save()
-	frappe.db.commit()
+
 @frappe.whitelist()
 def get_employee(usr):
 	res = frappe.db.sql('''

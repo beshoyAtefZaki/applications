@@ -31,7 +31,13 @@ def get_data():
            "name": "Executive manager",
            "description": _("Employee applications."),
    		"onboard": 1,
-         }
+         },
+		 {
+           "type": "doctype",
+           "name": "G M Applications",
+           "description": _("Employee applications."),
+   			"onboard": 1,
+         },
       ]
 
     	}]
