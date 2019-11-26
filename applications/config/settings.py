@@ -4,8 +4,8 @@ from frappe.desk.moduleview import add_setup_section
 
 def get_data():
 	data =[
-	{
-	"label": _("Settings"),
+		{
+		"label": _("Settings"),
 	    "icon": "fa fa-wrench",
 	    "items": [
 	      {
@@ -15,9 +15,9 @@ def get_data():
 	        "description": _("Employee applications."),
 	        "hide_count": True,
 	        "settings": 1,
-	}
-	]
-	}
-	]
+			}
+			]
+			}
+			]
 
 	return data

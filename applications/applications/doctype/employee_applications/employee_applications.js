@@ -13,9 +13,7 @@ frappe.ui.form.on('Employee applications', {
 
 			frm.set_value("employee" ,r.message.name)
 			frm.set_value("employee_name" ,r.message.employee_name)
-				// frm.set_value("employee" ,r.message)
 
-      // frm.set_value("contratc_end_date" ,r.message)
     }
 
 
@@ -23,8 +21,7 @@ frappe.ui.form.on('Employee applications', {
 },
 	employee :  function(frm) {
     var employee = frm.doc.employee ;
-		// var empl = frappe.session.user
-		// var em = frappe.get_doc("Employee" ,employee)
+		
     frappe.call({
     method:'applications.applications.doctype.employee_applications.employee_applications.get_employee',
     args: {

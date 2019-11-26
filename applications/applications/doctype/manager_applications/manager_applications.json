@@ -9,7 +9,8 @@
   "employee",
   "employee_applications",
   "employee_name",
-  "status",
+  "ap_status",
+  "manager_approved",
   "applications",
   "attachment",
   "amended_from"
@@ -23,14 +24,6 @@
    "options": "Employee",
    "read_only": 1,
    "reqd": 1
-  },
-  {
-   "default": "Waiting",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "\nWaiting\nProcessing\nApproved"
   },
   {
    "fieldname": "applications",
@@ -75,10 +68,27 @@
    "label": "Employee applications",
    "options": "Employee applications",
    "read_only": 1
+  },
+  {
+   "default": "Waiting",
+   "fieldname": "manager_approved",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Manager Approved",
+   "options": "Waiting\nApproved\nRejected",
+   "reqd": 1
+  },
+  {
+   "default": "Waiting",
+   "fieldname": "ap_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nWaiting\nProcessing\nApproved"
   }
  ],
  "is_submittable": 1,
- "modified": "2019-11-25 14:55:21.954214",
+ "modified": "2019-11-26 14:00:46.591810",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Manager applications",

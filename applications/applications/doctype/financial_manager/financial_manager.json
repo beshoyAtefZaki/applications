@@ -7,7 +7,9 @@
  "field_order": [
   "employee",
   "naming_series",
+  "employee_applications",
   "status",
+  "manager_approved",
   "applications",
   "attachment",
   "amended_from"
@@ -55,14 +57,27 @@
    "in_list_view": 1,
    "label": "Series",
    "no_copy": 1,
-   "options": "FMN-APP-.YYYY.-",
+   "options": "FMN-APP-.-",
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "employee_applications",
+   "fieldtype": "Link",
+   "label": "Employee applications",
+   "options": "Employee applications",
+   "read_only": 1
+  },
+  {
+   "fieldname": "manager_approved",
+   "fieldtype": "Select",
+   "label": "Manager Approved",
+   "options": "Approved\nRejected"
   }
  ],
  "is_submittable": 1,
- "modified": "2019-11-25 10:48:42.973225",
+ "modified": "2019-11-26 13:11:12.823216",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Financial manager",

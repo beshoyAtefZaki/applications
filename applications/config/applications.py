@@ -21,17 +21,18 @@ def get_data():
  		"onboard": 1,
        },
 	    {
+		  "type": "doctype",
+		  "name": "Executive manager",
+		  "description": _("Employee applications."),
+	   "onboard": 1,
+		},
+	    {
           "type": "doctype",
           "name": "Financial manager",
           "description": _("Employee applications."),
   		"onboard": 1,
         },
-		 {
-           "type": "doctype",
-           "name": "Executive manager",
-           "description": _("Employee applications."),
-   		"onboard": 1,
-         },
+
 		 {
            "type": "doctype",
            "name": "G M Applications",

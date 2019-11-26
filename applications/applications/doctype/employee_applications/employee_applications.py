@@ -9,9 +9,16 @@ from applications.utilites import create_manager_app
 
 
 class Employeeapplications(Document):
+		# def validate(self):
+		# 	status = "Processing"
+		# 	self.status = status
+		# 	self.save()
 		def on_submit(self):
-			create_manager_app("Manager applications", self.name , self.employee , self.employee_name , self.status ,
+				status = "Processing"
+				self.ap_status = status
+				create_manager_app("Manager applications", self.name , self.employee , self.employee_name ,status  ,
 								self.applications , self.attachment)
+
 
 
 
