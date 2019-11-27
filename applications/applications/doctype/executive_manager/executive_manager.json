@@ -19,32 +19,33 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Employee",
    "options": "Employee",
+   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "applications",
    "fieldtype": "Text Editor",
    "label": "Applications",
+   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "attachment",
    "fieldtype": "Attach",
-   "label": "Attachment"
+   "label": "Attachment",
+   "read_only": 1
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
-   "options": "Financial manager"
+   "options": "Manager applications"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Series",
    "no_copy": 1,
    "options": "EXM-APP-.YYYY.-",
@@ -56,18 +57,19 @@
    "fieldname": "employee_applications",
    "fieldtype": "Link",
    "label": "Employee applications",
-   "options": "Employee applications"
+   "options": "Employee applications",
+   "read_only": 1
   },
   {
    "fieldname": "employee_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Employee Name"
+   "label": "Employee Name",
+   "read_only": 1
   },
   {
    "fieldname": "manager_approved",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Manager Approved",
    "options": "Approved\nRejected"
   },
@@ -75,13 +77,12 @@
    "default": "Waiting",
    "fieldname": "ap_status",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Status",
-   "options": "\nWaiting\nProcessing\nApproved"
+   "options": "\nWaiting\nProcessing\nApproved\nRejected"
   }
  ],
  "is_submittable": 1,
- "modified": "2019-11-26 14:49:17.297431",
+ "modified": "2019-11-27 16:08:22.874587",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Executive manager",

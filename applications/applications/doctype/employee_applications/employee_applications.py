@@ -9,10 +9,6 @@ from applications.utilites import create_manager_app
 
 
 class Employeeapplications(Document):
-		# def validate(self):
-		# 	status = "Processing"
-		# 	self.status = status
-		# 	self.save()
 		def on_submit(self):
 				status = "Processing"
 				self.ap_status = status

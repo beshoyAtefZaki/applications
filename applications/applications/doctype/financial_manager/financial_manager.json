@@ -8,6 +8,7 @@
   "employee",
   "naming_series",
   "employee_applications",
+  "employee_name",
   "status",
   "manager_approved",
   "applications",
@@ -18,7 +19,6 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Employee",
    "options": "Employee",
    "reqd": 1
@@ -29,7 +29,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nWaiting\nProcessing\nApproved"
+   "options": "\nWaiting\nProcessing\nApproved\nRejected"
   },
   {
    "fieldname": "applications",
@@ -54,7 +54,6 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Series",
    "no_copy": 1,
    "options": "FMN-APP-.-",
@@ -74,10 +73,16 @@
    "fieldtype": "Select",
    "label": "Manager Approved",
    "options": "Approved\nRejected"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
   }
  ],
  "is_submittable": 1,
- "modified": "2019-11-26 13:11:12.823216",
+ "modified": "2019-11-27 15:56:52.571729",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Financial manager",

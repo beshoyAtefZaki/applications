@@ -5,12 +5,12 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "manager_approved",
   "naming_series",
   "employee",
   "employee_applications",
   "employee_name",
   "ap_status",
-  "manager_approved",
   "applications",
   "attachment",
   "amended_from"
@@ -19,7 +19,6 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Employee",
    "options": "Employee",
    "read_only": 1,
@@ -29,16 +28,19 @@
    "fieldname": "applications",
    "fieldtype": "Text Editor",
    "label": "Applications",
+   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "attachment",
    "fieldtype": "Attach",
-   "label": "Attachment"
+   "label": "Attachment",
+   "read_only": 1
   },
   {
    "fieldname": "employee_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Employee Name",
    "read_only": 1
   },
@@ -54,7 +56,6 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Series",
    "no_copy": 1,
    "options": "MNG-APP-.YYYY.-",
@@ -73,7 +74,6 @@
    "default": "Waiting",
    "fieldname": "manager_approved",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Manager Approved",
    "options": "Waiting\nApproved\nRejected",
    "reqd": 1
@@ -82,13 +82,15 @@
    "default": "Waiting",
    "fieldname": "ap_status",
    "fieldtype": "Select",
-   "in_list_view": 1,
+   "in_global_search": 1,
+   "in_standard_filter": 1,
    "label": "Status",
-   "options": "\nWaiting\nProcessing\nApproved"
+   "options": "\nWaiting\nProcessing\nApproved\nRejected",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2019-11-26 14:00:46.591810",
+ "modified": "2019-11-27 16:07:11.801064",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Manager applications",
