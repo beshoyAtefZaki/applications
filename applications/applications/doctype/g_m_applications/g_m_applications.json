@@ -11,6 +11,8 @@
   "employee_applications",
   "status",
   "manager_approved",
+  "refrence_type",
+  "refrence",
   "applications",
   "attachment",
   "amended_from"
@@ -81,10 +83,22 @@
    "fieldtype": "Link",
    "label": "Employee applications",
    "options": "Employee applications"
+  },
+  {
+   "fieldname": "refrence_type",
+   "fieldtype": "Link",
+   "label": "Refrence Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "refrence",
+   "fieldtype": "Dynamic Link",
+   "label": "Refrence",
+   "options": "refrence_type"
   }
  ],
  "is_submittable": 1,
- "modified": "2019-11-27 16:11:08.577777",
+ "modified": "2019-12-01 14:49:49.374195",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "G M Applications",

@@ -5,11 +5,14 @@
 from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
-from applications.utilites import create_manager_app
+from applications.utilites import create_manager_app , send_mail
 
 
 class Employeeapplications(Document):
 		def on_submit(self):
+
+				
+				send_mail(self.employee_name,str(self.name))
 				status = "Processing"
 				self.ap_status = status
 				create_manager_app("Manager applications", self.name , self.employee , self.employee_name ,status  ,

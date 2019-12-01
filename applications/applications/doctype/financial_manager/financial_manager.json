@@ -9,8 +9,10 @@
   "naming_series",
   "employee_applications",
   "employee_name",
-  "status",
+  "ap_status",
   "manager_approved",
+  "refrence_type",
+  "refrence",
   "g_m_approved",
   "applications",
   "attachment",
@@ -23,14 +25,6 @@
    "label": "Employee",
    "options": "Employee",
    "reqd": 1
-  },
-  {
-   "default": "Waiting",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "\nWaiting\nProcessing\nApproved\nRejected"
   },
   {
    "fieldname": "applications",
@@ -82,16 +76,34 @@
    "label": "Employee Name"
   },
   {
+   "default": "Waiting",
+   "fieldname": "ap_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nWaiting\nProcessing\nApproved\nRejected"
+  },
+  {
+   "fieldname": "refrence_type",
+   "fieldtype": "Link",
+   "label": "Refrence Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "refrence",
+   "fieldtype": "Dynamic Link",
+   "label": "Refrence",
+   "options": "refrence_type"
+  },
+  {
    "default": "0",
    "fieldname": "g_m_approved",
    "fieldtype": "Check",
-   "in_list_view": 1,
-   "label": "G M Approved",
-   "reqd": 1
+   "label": "G M Approved"
   }
  ],
  "is_submittable": 1,
- "modified": "2019-11-27 17:28:46.442627",
+ "modified": "2019-12-01 14:13:12.753190",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Financial manager",
