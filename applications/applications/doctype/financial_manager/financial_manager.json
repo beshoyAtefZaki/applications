@@ -9,8 +9,10 @@
   "naming_series",
   "employee_applications",
   "employee_name",
-  "status",
+  "ap_status",
   "manager_approved",
+  "refrence_type",
+  "refrence",
   "applications",
   "attachment",
   "amended_from"
@@ -22,14 +24,6 @@
    "label": "Employee",
    "options": "Employee",
    "reqd": 1
-  },
-  {
-   "default": "Waiting",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "\nWaiting\nProcessing\nApproved\nRejected"
   },
   {
    "fieldname": "applications",
@@ -79,10 +73,30 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Employee Name"
+  },
+  {
+   "default": "Waiting",
+   "fieldname": "ap_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nWaiting\nProcessing\nApproved\nRejected"
+  },
+  {
+   "fieldname": "refrence_type",
+   "fieldtype": "Link",
+   "label": "Refrence Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "refrence",
+   "fieldtype": "Dynamic Link",
+   "label": "Refrence",
+   "options": "refrence_type"
   }
  ],
  "is_submittable": 1,
- "modified": "2019-11-27 15:56:52.571729",
+ "modified": "2019-11-30 17:36:36.553581",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Financial manager",
