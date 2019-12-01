@@ -11,6 +11,7 @@
   "employee_name",
   "status",
   "manager_approved",
+  "g_m_approved",
   "applications",
   "attachment",
   "amended_from"
@@ -79,10 +80,18 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Employee Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "g_m_approved",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "G M Approved",
+   "reqd": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2019-11-27 15:56:52.571729",
+ "modified": "2019-11-27 17:28:46.442627",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Financial manager",
