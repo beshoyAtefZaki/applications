@@ -44,38 +44,4 @@ def get_data():
 
 
     	},
-		{
-		"label": _("Applications 2"),
-        "items": [
-          {
-            "type": "doctype",
-            "name": "Employee applications",
-            "description": _("Employee applications."),
-    		"onboard": 1,
-          },
-    	   {
-             "type": "doctype",
-             "name": "Manager applications",
-             "description": _("Employee applications."),
-     		"onboard": 1,
-           },
-    	    {
-              "type": "doctype",
-              "name": "Financial manager",
-              "description": _("Employee applications."),
-      		"onboard": 1,
-            },
-    		 {
-               "type": "doctype",
-               "name": "Executive manager",
-               "description": _("Employee applications."),
-       		"onboard": 1,
-             },
-    		 {
-               "type": "doctype",
-               "name": "G M Applications",
-               "description": _("Employee applications."),
-       			"onboard": 1,
-             },
-          ]
-		}]
+	]
