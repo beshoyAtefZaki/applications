@@ -72,8 +72,8 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2019-12-05 13:10:53.383182",
- "modified_by": "Administrator",
+ "modified": "2019-12-05 14:54:42.153782",
+ "modified_by": "alqimmacompany2020@gmail.com",
  "module": "Applications",
  "name": "Employee applications",
  "owner": "Administrator",
@@ -103,21 +103,6 @@
    "read": 1,
    "report": 1,
    "role": "Employee",
-   "share": 1,
-   "submit": 1,
-   "write": 1
-  },
-  {
-   "cancel": 1,
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "if_owner": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Customer",
    "share": 1,
    "submit": 1,
    "write": 1

@@ -98,8 +98,8 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2019-12-01 14:49:49.374195",
- "modified_by": "Administrator",
+ "modified": "2019-12-05 15:08:30.286377",
+ "modified_by": "alqimmacompany2020@gmail.com",
  "module": "Applications",
  "name": "G M Applications",
  "owner": "Administrator",
@@ -128,7 +128,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "HR Manager",
+   "role": "G M manager",
    "share": 1,
    "submit": 1,
    "write": 1
