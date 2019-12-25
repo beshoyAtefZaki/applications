@@ -8,10 +8,12 @@
   "naming_series",
   "employee",
   "employee_name",
-  "ap_status",
+  "bank",
+  "amount",
   "applications",
   "attachment",
-  "amended_from"
+  "amended_from",
+  "ap_status"
  ],
  "fields": [
   {
@@ -53,7 +55,7 @@
    "fieldtype": "Select",
    "label": "Series",
    "no_copy": 1,
-   "options": "EMP-APP-.YYYY.-",
+   "options": "AQ-01-.YY.-.MM.-.DD.-",
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
@@ -69,11 +71,25 @@
    "label": "Status",
    "options": "\nWaiting\nProcessing\nApproved\nRejected",
    "read_only": 1
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "label": "Bank ",
+   "options": "Bank"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Amount",
+   "reqd": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2019-12-05 14:54:42.153782",
- "modified_by": "alqimmacompany2020@gmail.com",
+ "modified": "2019-12-25 14:27:27.842849",
+ "modified_by": "mohamed.ouf@alqimma.com.sa",
  "module": "Applications",
  "name": "Employee applications",
  "owner": "Administrator",
@@ -106,9 +122,48 @@
    "share": 1,
    "submit": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "G M manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "COO",
+   "share": 1,
+   "submit": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "track_changes": 1
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }
