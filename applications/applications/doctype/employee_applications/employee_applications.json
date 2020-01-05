@@ -5,15 +5,17 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "ap_status",
+  "application_type",
   "naming_series",
+  "date",
   "employee",
   "employee_name",
   "bank",
   "amount",
   "applications",
   "attachment",
-  "amended_from",
-  "ap_status"
+  "amended_from"
  ],
  "fields": [
   {
@@ -69,10 +71,11 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "\nWaiting\nProcessing\nApproved\nRejected",
+   "options": "\nWaiting\nProcessing To Accounting\nProcessing To HR\nApproved\nRejected\nCompleted",
    "read_only": 1
   },
   {
+   "depends_on": "eval:doc.application_type ==\"Processing To Accounting\"",
    "fieldname": "bank",
    "fieldtype": "Link",
    "label": "Bank ",
@@ -85,11 +88,23 @@
    "in_preview": 1,
    "label": "Amount",
    "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "application_type",
+   "fieldtype": "Select",
+   "label": "Application Type",
+   "options": "\nAccounting Application\nHR Application",
+   "reqd": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2019-12-25 14:27:27.842849",
- "modified_by": "mohamed.ouf@alqimma.com.sa",
+ "modified": "2020-01-05 16:30:49.530412",
+ "modified_by": "Administrator",
  "module": "Applications",
  "name": "Employee applications",
  "owner": "Administrator",
