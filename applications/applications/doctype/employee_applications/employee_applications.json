@@ -15,6 +15,7 @@
   "amount",
   "applications",
   "attachment",
+  "code",
   "amended_from"
  ],
  "fields": [
@@ -34,6 +35,8 @@
   {
    "fieldname": "attachment",
    "fieldtype": "Attach",
+   "ignore_user_permissions": 1,
+   "in_preview": 1,
    "label": "Attachment"
   },
   {
@@ -100,10 +103,17 @@
    "label": "Application Type",
    "options": "\nAccounting Application\nHR Application",
    "reqd": 1
+  },
+  {
+   "default": "\n<a href=\"www.googlr.com\">link text</a>\n",
+   "fieldname": "code",
+   "fieldtype": "HTML",
+   "label": "code",
+   "options": "\n\n"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-01-05 16:30:49.530412",
+ "modified": "2020-01-17 01:48:35.763029",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Employee applications",

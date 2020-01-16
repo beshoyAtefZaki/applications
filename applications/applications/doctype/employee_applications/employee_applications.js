@@ -2,6 +2,15 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Employee applications', {
+	onload:function(frm){
+		if(frm.doc.attachment){
+			var f = frm.doc.attachment;
+			var text = '<a href=" ' +f.toString() + ' " target="_blank">Perview File </a>' 
+			frm.set_df_property('code', 'options', [text])
+		 	frm.refresh_field("code")
+
+		}
+	},
 	application_type:function(frm){
 		var type = frm.doc.application_type
 		if (type == "Accounting Application"){
@@ -26,5 +35,16 @@ frappe.ui.form.on('Employee applications', {
 
 
 })
+	},
+	attachment:function(frm){
+		var f = frm.doc.attachment;
+		console.log(f.toString())
+		var text = '<a href=" ' +f.toString() + ' ">Perview File </a>' ;
+		console.log(text)
+		frm.set_value("code" , text);
+		 frm.set_df_property('code', 'options', [text])
+		 frm.refresh_field("code")
+
 	}
+
 });
