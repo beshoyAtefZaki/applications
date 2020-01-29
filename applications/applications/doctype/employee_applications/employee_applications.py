@@ -9,7 +9,7 @@ from applications.utilites import create_manager_app , send_mail
 
 
 class Employeeapplications(Document):
-		pass
+	pass
 		# def on_submit(self):
 		#
 		#

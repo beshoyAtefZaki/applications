@@ -15,7 +15,9 @@
   "amount",
   "applications",
   "attachment",
-  "amended_from"
+  "code",
+  "amended_from",
+  "to"
  ],
  "fields": [
   {
@@ -28,6 +30,7 @@
   {
    "fieldname": "applications",
    "fieldtype": "Text Editor",
+   "in_standard_filter": 1,
    "label": "Applications",
    "reqd": 1
   },
@@ -67,11 +70,8 @@
    "fieldname": "ap_status",
    "fieldtype": "Select",
    "in_filter": 1,
-   "in_global_search": 1,
-   "in_preview": 1,
-   "in_standard_filter": 1,
    "label": "Status",
-   "options": "\nWaiting\nProcessing To Accounting\nProcessing To HR\nApproved\nRejected\nCompleted",
+   "options": "Waiting\nProcessing To Accounting\nProcessing To HR\nApproved\nRejected\nCompleted",
    "read_only": 1
   },
   {
@@ -97,13 +97,28 @@
   {
    "fieldname": "application_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Application Type",
-   "options": "\nAccounting Application\nHR Application",
+   "options": "Accounting Application\nHR Application",
    "reqd": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "HTML",
+   "label": "code"
+  },
+  {
+   "default": "G M manager",
+   "fieldname": "to",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "label": "To",
+   "options": "\nG M manager\nAccounts Manager\nHR Manager\nFinancial Unit Manager\nAdministrative Unit Manager\nCOO\nCompleted\nRejected",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2020-01-05 16:30:49.530412",
+ "modified": "2020-01-26 12:36:59.391227",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Employee applications",
@@ -126,7 +141,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "if_owner": 1,
@@ -134,9 +148,7 @@
    "read": 1,
    "report": 1,
    "role": "Employee",
-   "share": 1,
-   "submit": 1,
-   "write": 1
+   "share": 1
   },
   {
    "create": 1,
@@ -147,8 +159,7 @@
    "read": 1,
    "report": 1,
    "role": "G M manager",
-   "share": 1,
-   "write": 1
+   "share": 1
   },
   {
    "create": 1,
@@ -159,8 +170,7 @@
    "read": 1,
    "report": 1,
    "role": "Accounts Manager",
-   "share": 1,
-   "write": 1
+   "share": 1
   },
   {
    "create": 1,
@@ -171,14 +181,21 @@
    "read": 1,
    "report": 1,
    "role": "COO",
-   "share": 1,
-   "submit": 1,
-   "write": 1
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "track_changes": 1,
- "track_seen": 1,
- "track_views": 1
+ "track_changes": 1
 }
