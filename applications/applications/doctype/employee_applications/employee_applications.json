@@ -6,6 +6,8 @@
  "engine": "InnoDB",
  "field_order": [
   "ap_status",
+  "rejected_for",
+  "rejected",
   "application_type",
   "naming_series",
   "date",
@@ -115,10 +117,26 @@
    "label": "To",
    "options": "\nG M manager\nAccounts Manager\nHR Manager\nFinancial Unit Manager\nAdministrative Unit Manager\nCOO\nCompleted\nRejected",
    "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "rejected_for",
+   "fieldtype": "Small Text",
+   "label": "Rejected For",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "rejected",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "rejected",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2020-01-26 12:36:59.391227",
+ "modified": "2020-03-30 05:39:23.935984",
  "modified_by": "Administrator",
  "module": "Applications",
  "name": "Employee applications",

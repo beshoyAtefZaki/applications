@@ -13,6 +13,49 @@ frappe.ui.form.on('Employee applications', {
 		if (frm.doc.__islocal){
 		frm.set_value("to" ,"G M manager" ) }
 	},
+		refresh:function(frm){
+		return frappe.call({
+				doc: frm.doc,
+				method : 'check_if_rejected',
+				callback:function(r){
+					if (r.message == 1 && frm.doc.rejected == 0) {
+
+						frappe.prompt([
+   				 {'fieldname': 'rejected', 'fieldtype': 'Small Text', 'label': 'Rejected Reason', 'reqd': 1}  
+					],
+							function(values){
+							  // frm.set_value("rejected_for" ,values.rejected)
+							  // frm.set_value("rejected" , 1)
+							  // frm.update()
+							 frappe.call({
+							 	doc: frm.doc,
+							 	method : 'add_rejected',
+							 	args :{
+							 		"rejected":values.rejected
+							 	},
+							 	callback:function(r){
+							 		frm.refresh_field("rejected_for")
+							 		frm.set_value("rejected" , 1)
+							 		frm.refresh()
+							 	
+							 	}
+
+							 }) 
+
+  									
+							},
+							'Rejected Reason',
+							'Save'
+					)
+
+
+
+
+					}
+					}
+					
+				})
+		} ,
 	application_type:function(frm){
 		var type = frm.doc.application_type
 		if (type == "Accounting Application"){

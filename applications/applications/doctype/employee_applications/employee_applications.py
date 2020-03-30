@@ -9,17 +9,16 @@ from applications.utilites import create_manager_app , send_mail
 
 
 class Employeeapplications(Document):
-	pass
-		# def on_submit(self):
-		#
-		#
-		# 		send_mail(self.employee_name,str(self.name))
-		# 		status = "Processing"
-		# 		self.ap_status = status
-		# 		create_manager_app("Manager applications", self.name , self.employee , self.employee_name ,status  ,
-		# 						self.applications , self.attachment)
+	
+	def check_if_rejected(self):
+		status_r = frappe.db.sql("""SELECT  is_rejected FROM `tabWorkflow State` WHERE workflow_state_name='%s' """ %self.workflow_state)
+		return status_r[0][0]
 
-
+	def add_rejected(self,rejected):
+		sql = frappe.db.sql(""" UPDATE `tabEmployee applications` SET rejected_for = '%s' ,
+						 rejected = 1 WHERE name = '%s' """ %(rejected,self.name))
+		frappe.db.commit()
+		return True
 
 
 
