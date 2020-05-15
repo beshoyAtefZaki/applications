@@ -12,6 +12,20 @@ frappe.ui.form.on('Employee applications', {
 		}
 		if (frm.doc.__islocal){
 		frm.set_value("to" ,"G M manager" ) }
+		
+		return frappe.call({
+				doc: frm.doc,
+				method : 'comments_view',
+				callback:function(r){
+					 // console.log(r.message)}
+					frm.set_df_property("comments_table" ,"options",r.message)
+					frm.refresh_field("action_table")
+
+				}
+
+
+				})
+
 	},
 		refresh:function(frm){
 		return frappe.call({
