@@ -49,8 +49,11 @@ frappe.ui.form.on('Employee applications', {
 							 	},
 							 	callback:function(r){
 							 		frm.refresh_field("rejected_for")
-							 		frm.set_value("rejected" , 1)
-							 		frm.refresh()
+							 		// frm.set_value("rejected" , 1)
+							 		
+							 		// frm.save()
+							 		// frm.refresh()
+
 							 	
 							 	}
 
@@ -69,6 +72,8 @@ frappe.ui.form.on('Employee applications', {
 					}
 					
 				})
+
+		frm.refresh()
 		} ,
 	application_type:function(frm){
 		var type = frm.doc.application_type
